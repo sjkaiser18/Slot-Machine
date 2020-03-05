@@ -5,18 +5,18 @@ To Compile:
 Compilation of this program is to be done in a 32-bit Kali Linux machine.
 1) Open terminal
 2)Navigate to wherever the file is kept
-  ie if on desktop, type 
-  		cd Desktop
-3)In order to disable Adress Space Layout Randomization (ASLR) type 
-    	cat /proc/sys/kernel/randomize_va_space
+  ie if on desktop 
+  	type cd Desktop
+3)In order to disable Adress Space Layout Randomization (ASLR) 
+    type cat /proc/sys/kernel/randomize_va_space
     note the value that follows:
       if the value is 0 (zero)
         continue on to the next step
       if the value is 1 or 2
-        you still need to disable ASLR type 
-        	echo 0 | sudo tee /proc/sys/kernel/randomize_va_space
-4) In order to compile the program we will also need to disable data execution protection type 
-    	g++ -g -o slots -fno-stack-protector slots.cpp
+        you still need to disable ASLR 
+	type echo 0 | sudo tee /proc/sys/kernel/randomize_va_space
+4) In order to compile the program we will also need to disable data execution protection 
+type g++ -g -o slots -fno-stack-protector slots.cpp
 5) To run the program type
 		./slots
 
