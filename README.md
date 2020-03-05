@@ -12,9 +12,9 @@ type cd Desktop
 3. In order to disable Adress Space Layout Randomization (ASLR)   
 type cat /proc/sys/kernel/randomize_va_space  
 note the value that follows:  
-     if the value is 0 (zero)--> continue on to the next step  
-     if the value is 1 or 2--> you still need to disable ASLR  
-     type echo 0 | sudo tee /proc/sys/kernel/randomize_va_space  
+     >if the value is 0 (zero)--> continue on to the next step  
+     >if the value is 1 or 2--> you still need to disable ASLR  
+     >>type echo 0 | sudo tee /proc/sys/kernel/randomize_va_space  
 
 4. In order to compile the program we will also need to disable data execution protection   
 type g++ -g -o slots -fno-stack-protector slots.cpp  
