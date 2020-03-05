@@ -1,2 +1,2 @@
 # Slot-Machine
-Buffer Overflow practice involving a buffer overflow
+Buffer Overflow practice involving a slot machine randomizatio manipulation
