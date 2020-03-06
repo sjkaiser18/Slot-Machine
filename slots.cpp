@@ -1,10 +1,10 @@
-
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 bool slots(std::string profit[],int size=3){
     srand((int)time(0));
+    char start[4];
     char spin[4]={'\0'};
     char valid='L';
 
@@ -15,8 +15,8 @@ bool slots(std::string profit[],int size=3){
 
 
     printf("Please enter the word 'spin' to spin \n");
-    std::cin>>spin;
-
+    std::cin>>start;
+    strcpy(spin,start);
     if(valid=='W'){
          return 1;
     }
@@ -45,7 +45,9 @@ int main(){
         printf("%s | ", profit[j].c_str());
     }
     printf(" \n ");
+
     if(winner==1){
+        bet=bet*1.5;
         printf("Congrats, you have won %d dollars",bet); //put in some sort of mechanism
     }
     else{
